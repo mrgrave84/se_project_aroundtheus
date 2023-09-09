@@ -17,3 +17,5 @@ The TripleTen Around The U.S. webpage is the third project in the Software Engin
 ![Here you may find the demo image how the webpage looks like in a desktop view](./images/demo/MAIN%20PAGE.jpg)
 
 #### GitHub Pages
+
+[Link to GitHub Pages!](https://mrgrave84.github.io/se_project_aroundtheus/)
