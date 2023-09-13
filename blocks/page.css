@@ -23,3 +23,9 @@
     width: calc(100% - 40px);
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+  .page__section {
+    margin: 0 19px;
+  }
+}

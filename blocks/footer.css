@@ -1,12 +1,24 @@
 .footer {
-  padding-top: 72px;
+  padding-top: 67px;
+  padding-bottom: 60px;
 }
 
 .footer__copyright {
   color: #545454;
-  font-family: Inter;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
+  margin: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 620px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+  .footer__copyright {
+    font-size: 14px;
+  }
 }
