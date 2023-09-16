@@ -14,5 +14,7 @@
   }
   .header__image {
     margin-bottom: 32px;
+    width: 126px;
+    height: 24px;
   }
 }
