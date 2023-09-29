@@ -10,6 +10,7 @@ The TripleTen Around The U.S. webpage is the third project in the Software Engin
 - Positioning
 - Flat BEM file structure
 - Responsive design
+- JavaScript
 
 ### Demo images
 
