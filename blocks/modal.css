@@ -5,16 +5,16 @@
   bottom: 0;
   left: 0;
   z-index: 999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba (0, 0, 0, 0.5);
   padding: 0 19px;
 }
 
-/* .modal_opened {
+.modal_opened {
   display: flex;
-} */
+}
 
 .modal__container {
   position: relative;
