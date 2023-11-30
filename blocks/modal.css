@@ -72,6 +72,7 @@
 .modal__form-input {
   outline: none;
   border: none;
+  color: rgba(0, 0, 0, 1);
 }
 
 .modal__line {
@@ -93,6 +94,12 @@
   padding: 0;
   position: absolute;
   bottom: 36.51px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal__button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 320px) and (max-width: 620px) {
