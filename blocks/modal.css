@@ -107,18 +107,26 @@
     padding: 25px 22px;
     max-width: 282px;
     height: 322px;
+    top: 123px;
   }
   .modal__button {
     width: 238px;
     height: 46px;
     bottom: 25px;
+    font-size: 14px;
   }
   .modal__close {
     width: 26px;
     height: 26px;
+    left: calc(100% - 30px);
   }
 
   .modal__heading {
     margin: 0 0 75px;
+    font-size: 18px;
+  }
+
+  .modal__form-input {
+    font-size: 14px;
   }
 }
