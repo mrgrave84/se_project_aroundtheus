@@ -35,14 +35,21 @@ const editProfileModal = document.querySelector("#edit-modal");
 const addCardModal = document.querySelector("#add-card-modal");
 const profileFormElement = editProfileModal.querySelector(".modal__form");
 const addCardFormElement = addCardModal.querySelector(".modal__form");
+const previewImageModal = document.querySelector("#preview-image-modal");
 
 // Buttons and other DOM nodes
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileModalCloseButton = editProfileModal.querySelector(".modal__close");
 const addCardModalCloseButton = addCardModal.querySelector(".modal__close");
+const previewImageModalCloseButton =
+  previewImageModal.querySelector(".modal__close");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const addNewCardButton = document.querySelector(".profile__add-button");
+const previewImage = previewImageModal.querySelector(".modal__preview");
+const previewModalDescription = previewImageModal.querySelector(
+  ".modal__preview-description"
+);
 
 // Form data
 const nameInput = profileFormElement.querySelector(".modal__input_type_name");
@@ -87,9 +94,24 @@ function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  deleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+  cardImage.addEventListener("click", () => {
+    previewImage.setAttribute("src", data.link);
+    previewImage.setAttribute("alt", data.name);
+    previewModalDescription.textContent = data.name;
+    openModal(previewImageModal);
+  });
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardTitle.textContent = data.name;
+
   return cardElement;
 }
 
@@ -107,6 +129,9 @@ profileModalCloseButton.addEventListener("click", () =>
 addNewCardButton.addEventListener("click", () => openModal(addCardModal));
 addCardModalCloseButton.addEventListener("click", () =>
   closeModal(addCardModal)
+);
+previewImageModalCloseButton.addEventListener("click", () =>
+  closeModal(previewImageModal)
 );
 
 // Loop
