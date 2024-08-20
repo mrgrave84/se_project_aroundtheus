@@ -4,15 +4,6 @@
   flex-direction: column;
 }
 
-.card__list {
-  margin: 51px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 282px);
-  grid-gap: 20px 17px;
-  justify-content: center;
-}
-
 .card__image {
   width: 282px;
   height: 282px;
@@ -50,4 +41,10 @@
   border: none;
   margin-right: 20px;
   padding: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
