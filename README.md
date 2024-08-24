@@ -25,3 +25,7 @@ This is the third project of the Software Engineering program at TripleTen. It w
 #### GitHub Pages
 
 [Link to GitHub Pages!](https://mrgrave84.github.io/se_project_aroundtheus)
+
+##### Video
+
+[Link to Google Drive!](https://drive.google.com/file/d/11j06IOEjKPDGoO4RMTrRy3e-tnbZ2yzx/view?usp=drive_link)
