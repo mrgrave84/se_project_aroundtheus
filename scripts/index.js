@@ -33,12 +33,18 @@ const profileCloseButton = document.querySelector("#profile-close-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
-const profileEditModalInputTitle = document.querySelector(
-  ".modal__input_type_title"
-);
+// const profileEditModalInputTitle = document.querySelector(
+//   ".modal__input_type_title"
+// );
+const profileEditModalInputTitle = document.querySelector("[name='title']");
+
+// const profileEditModalInputDescription = document.querySelector(
+//   ".modal__input_type_description"
+// );
 const profileEditModalInputDescription = document.querySelector(
-  ".modal__input_type_description"
+  "[name='description']"
 );
+
 const profileEditModalForm = profileEditModal.querySelector(".modal__form");
 const cardTemplate = document.querySelector("#card-template").content;
 const cardListEl = document.querySelector(".cards__list");
