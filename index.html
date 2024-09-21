@@ -45,13 +45,9 @@
     <!-- Profile Edit Modal -->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
-        <button
-          class="modal__close"
-          id="profile-close-button"
-          type="button"
-        ></button>
+        <button class="modal__close" type="button"></button>
         <h3 class="modal__title">Edit profile</h3>
-        <form action="#" class="modal__form">
+        <form class="modal__form" id="profile-edit-modal-form">
           <fieldset class="modal__form-fieldset">
             <input
               type="text"
@@ -72,10 +68,48 @@
         </form>
       </div>
     </div>
+
+    <!-- Add Card Modal -->
+    <div class="modal" id="add-card-modal">
+      <div class="modal__container">
+        <button class="modal__close" type="button"></button>
+        <h3 class="modal__title">New Place</h3>
+        <form class="modal__form" id="add-card-modal-form">
+          <fieldset class="modal__form-fieldset">
+            <input
+              type="text"
+              name="name"
+              class="modal__input"
+              placeholder="Title"
+            />
+          </fieldset>
+          <fieldset class="modal__form-fieldset">
+            <input
+              type="text"
+              name="url"
+              class="modal__input"
+              placeholder="Image URL"
+            />
+          </fieldset>
+          <button class="modal__save" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Preview Image Modal -->
+    <div class="modal" id="preview-image-modal">
+      <div class="modal__container-preview">
+        <button class="modal__close" type="button"></button>
+        <img src="#" alt="" class="modal__preview-image" />
+        <p class="modal__preview-description"></p>
+      </div>
+    </div>
+
     <!-- Adding Cards' Content with Template Element -->
     <template id="card-template">
       <li class="card">
         <img src="" alt="" class="card__image" />
+        <button class="card__delete-button" type="button"></button>
         <div class="card__content">
           <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
