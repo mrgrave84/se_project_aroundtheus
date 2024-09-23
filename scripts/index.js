@@ -72,6 +72,7 @@ function handleAddCardModalFormSubmit(evt) {
   const link = addCardModalInputUrl.value;
   renderCard({ name, link }, cardListEl);
   closeModal(addCardModal);
+  evt.target.reset();
 }
 
 // Event Listeners
@@ -126,9 +127,9 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
   return cardElement;
 }
-function renderCard(cardData, newCard) {
+function renderCard(cardData, cardListEl) {
   const cardEl = getCardElement(cardData);
-  newCard.prepend(cardEl);
+  cardListEl.prepend(cardEl);
 }
 // Loops
 initialCards.forEach((cardData) => renderCard(cardData, cardListEl));
