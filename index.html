@@ -43,65 +43,87 @@
       </footer>
     </div>
     <!-- Profile Edit Modal -->
-    <div class="modal" id="profile-edit-modal">
-      <div class="modal__container">
-        <button class="modal__close" type="button"></button>
-        <h3 class="modal__title">Edit profile</h3>
-        <form class="modal__form" id="profile-edit-modal-form">
-          <fieldset class="modal__form-fieldset">
+    <div class="popup" id="profile-edit-popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h3 class="popup__title">Edit profile</h3>
+        <form class="popup__form" id="profile-edit-popup-form" novalidate>
+          <label class="popup__form-label">
             <input
               type="text"
               name="title"
-              class="modal__input"
+              id="owner-name"
+              class="popup__input"
               placeholder="Name"
+              required
+              minlength="2"
+              maxlength="40"
             />
-          </fieldset>
-          <fieldset class="modal__form-fieldset">
+            <span class="popup__error" id="owner-name-error"></span>
+          </label>
+          <label class="popup__form-label">
             <input
               type="text"
               name="description"
-              class="modal__input"
+              id="owner-description"
+              class="popup__input"
               placeholder="Description"
+              required
+              minlength="2"
+              maxlength="200"
             />
-          </fieldset>
-          <button class="modal__save" type="submit">Save</button>
+            <span class="popup__error" id="owner-description-error"></span>
+          </label>
+          <button class="popup__button popup__button_disabled" type="submit">
+            Save
+          </button>
         </form>
       </div>
     </div>
 
     <!-- Add Card Modal -->
-    <div class="modal" id="add-card-modal">
-      <div class="modal__container">
-        <button class="modal__close" type="button"></button>
-        <h3 class="modal__title">New Place</h3>
-        <form class="modal__form" id="add-card-modal-form">
-          <fieldset class="modal__form-fieldset">
+    <div class="popup" id="add-card-popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <h3 class="popup__title">New Place</h3>
+        <form class="popup__form" id="add-card-popup-form" novalidate>
+          <label class="popup__form-label">
             <input
               type="text"
               name="name"
-              class="modal__input"
+              id="place-name"
+              class="popup__input"
               placeholder="Title"
+              required
+              minlength="1"
+              maxlength="30"
             />
-          </fieldset>
-          <fieldset class="modal__form-fieldset">
+            <span class="popup__error" id="place-name-error"></span>
+          </label>
+          <label class="popup__form-label">
             <input
-              type="text"
-              name="url"
-              class="modal__input"
+              type="url"
+              name="link"
+              id="place-link"
+              class="popup__input"
               placeholder="Image URL"
+              required
             />
-          </fieldset>
-          <button class="modal__save" type="submit">Save</button>
+            <span class="popup__error" id="place-link-error"></span>
+          </label>
+          <button class="popup__button popup__button_disabled" type="submit">
+            Save
+          </button>
         </form>
       </div>
     </div>
 
     <!-- Preview Image Modal -->
-    <div class="modal" id="preview-image-modal">
-      <div class="modal__container-preview">
-        <button class="modal__close" type="button"></button>
-        <img src="#" alt="" class="modal__preview-image" />
-        <p class="modal__preview-description"></p>
+    <div class="popup" id="preview-image-popup">
+      <div class="popup__container-preview">
+        <button class="popup__close" type="button"></button>
+        <img src="#" alt="" class="popup__preview-image" />
+        <p class="popup__preview-description"></p>
       </div>
     </div>
 
@@ -117,6 +139,7 @@
       </li>
     </template>
 
-    <script src="./scripts/index.js"></script>
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/validate.js"></script>
   </body>
 </html>
