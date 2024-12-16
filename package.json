@@ -1,0 +1,15 @@
+{
+  "name": "se_project_aroundtheus",
+  "version": "1.0.0",
+  "description": "This is the third project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the provided Figma design brief. This project is made so all the elements are displayed correctly on popular screen sizes.",
+  "main": "./src/pages/index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "5.76.0",
+    "webpack-cli": "4.10.0"
+  }
+}
