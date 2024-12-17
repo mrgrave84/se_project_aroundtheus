@@ -1,14 +1,15 @@
-import Card from "../components/Card.js";
-import FormValidator from "../components/FormValidator.js";
-import { initialCards, settings } from "../utils/constants.js";
-import Section from "../components/Section.js";
-import { PopupWithForm } from "../components/PopupWithForm.js";
-import { PopupWithImage } from "../components/PopupWithImage.js";
-import UserInfo from "../components/UserInfo.js";
+import Card from "./components/Card.js";
+import FormValidator from "./components/FormValidator.js";
+import { initialCards, settings } from "./utils/constants.js";
+import Section from "./components/Section.js";
+import { PopupWithForm } from "./components/PopupWithForm.js";
+import { PopupWithImage } from "./components/PopupWithImage.js";
+import UserInfo from "./components/UserInfo.js";
+import "./pages/index.css";
 
-const cardListEl = document.querySelector(".cards__list");
-const profileEditModal = document.querySelector("#profile-edit-popup");
-const addCardModal = document.querySelector("#add-card-popup");
+// const cardListEl = document.querySelector(".cards__list");
+// const profileEditModal = document.querySelector("#profile-edit-popup");
+// const addCardModal = document.querySelector("#add-card-popup");
 const profileEditModalForm = document.forms["profile-edit-popup-form"];
 const addCardModalForm = document.forms["add-card-popup-form"];
 
