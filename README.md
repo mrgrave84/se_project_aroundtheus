@@ -1,6 +1,6 @@
 # Project 3: Around The U.S.
 
-This is the third project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on the provided Figma design brief. This project is made so all the elements are displayed correctly on popular screen sizes.
+This is the third project of the Software Engineering program at TripleTen that runs currently until eighth. It was created using HTML and CSS, based on the provided Figma design brief. Starting from the sixth project JavaScript is being added. This project is made so all the elements are displayed correctly on popular screen sizes.
 
 ## Project Features
 
@@ -9,6 +9,10 @@ This is the third project of the Software Engineering program at TripleTen. It w
 - Grid
 - Flat BEM file structure
 - Responsive design
+- JavaScript
+- OOP
+- Webpack
+- Babel
 
 ### Overview
 
@@ -18,9 +22,9 @@ This is the third project of the Software Engineering program at TripleTen. It w
 
 **Images**
 
-![Here you may find the demo image how the webpage looks like in a desktop view](./images/demo/MAIN%20PAGE.jpg)
+![Here you may find the demo image how the webpage looks like in a desktop view](./src/images/demo/MAIN%20PAGE.jpg)
 
-![Here you may find the demo image how the webpage looks like in a mobile view](./images/demo/MOBILE.jpg)
+![Here you may find the demo image how the webpage looks like in a mobile view](./src/images/demo/MOBILE.jpg)
 
 #### GitHub Pages
 
