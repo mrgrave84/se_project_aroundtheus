@@ -38,13 +38,11 @@ profileEditButton.addEventListener("click", () => {
   const userData = userInfo.getUserInfo();
   profileEditModalForm.elements["title"].value = userData.name;
   profileEditModalForm.elements["description"].value = userData.job;
-  console.log(userData);
 });
 profileEditModalForm.addEventListener(
   "submit",
   handleProfileEditModalFormSubmit
 );
-addCardModalForm.addEventListener("submit", handleAddCardModalFormSubmit);
 addCardButton.addEventListener("click", () => {
   addCardFormValidator.disableSubmitButton();
   popupWithAddCardForm.open();
@@ -63,7 +61,7 @@ function handleProfileEditModalFormSubmit(data) {
 // Function to add a new card
 function handleAddCardModalFormSubmit(data) {
   const newCard = {
-    name: data.title,
+    name: data.name,
     link: data.link,
   };
 
@@ -76,10 +74,10 @@ function handleImageClick(name, link) {
   popupWithImage.open({ name, link });
 }
 
-function renderCard(cardData, cardListEl, method = "prepend") {
+function renderCard(cardData) {
   const card = new Card(cardData, "#card-template", handleImageClick);
   const cardElement = card.generateCard(cardData);
-  cardListEl[method](cardElement);
+  cardSection.addItem(cardElement);
 }
 
 // Instance of Section to manage cards
