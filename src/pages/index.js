@@ -39,12 +39,8 @@ profileEditButton.addEventListener("click", () => {
   profileEditModalForm.elements["title"].value = userData.name;
   profileEditModalForm.elements["description"].value = userData.job;
 });
-profileEditModalForm.addEventListener(
-  "submit",
-  handleProfileEditModalFormSubmit
-);
+
 addCardButton.addEventListener("click", () => {
-  addCardFormValidator.disableSubmitButton();
   popupWithAddCardForm.open();
 });
 
@@ -67,6 +63,7 @@ function handleAddCardModalFormSubmit(data) {
 
   renderCard(newCard);
   popupWithAddCardForm.close();
+  addCardFormValidator.disableSubmitButton();
 }
 
 // Function to open preview modal and handle image click
@@ -74,9 +71,15 @@ function handleImageClick(name, link) {
   popupWithImage.open({ name, link });
 }
 
-function renderCard(cardData) {
+// Function to create Card Element
+function createCard(cardData) {
   const card = new Card(cardData, "#card-template", handleImageClick);
-  const cardElement = card.generateCard(cardData);
+  return card.generateCard();
+}
+
+// Function (universal) to add Card Element to DOM and display it on the page
+function renderCard(cardData) {
+  const cardElement = createCard(cardData);
   cardSection.addItem(cardElement);
 }
 
@@ -84,11 +87,7 @@ function renderCard(cardData) {
 const cardSection = new Section(
   {
     items: initialCards,
-    renderer: (item) => {
-      const card = new Card(item, "#card-template", handleImageClick);
-      const cardElement = card.generateCard();
-      cardSection.addItem(cardElement);
-    },
+    renderer: renderCard,
   },
   ".cards__list"
 );
