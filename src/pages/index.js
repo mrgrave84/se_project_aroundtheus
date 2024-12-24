@@ -52,6 +52,7 @@ popupWithImage.setEventListeners();
 function handleProfileEditModalFormSubmit(data) {
   userInfo.setUserInfo({ name: data.title, job: data.description });
   popupWithProfileForm.close();
+  formValidators["edit-popup-form"].disableSubmitButton();
 }
 
 // Function to add a new card
@@ -63,7 +64,7 @@ function handleAddCardModalFormSubmit(data) {
 
   renderCard(newCard);
   popupWithAddCardForm.close();
-  addCardFormValidator.disableSubmitButton();
+  formValidators["card-popup-form"].disableSubmitButton();
 }
 
 // Function to open preview modal and handle image click
@@ -101,7 +102,22 @@ const userInfo = new UserInfo({
 });
 
 // Instances of Validation
-const editFormValidator = new FormValidator(settings, profileEditModalForm);
-editFormValidator.enableValidation();
-const addCardFormValidator = new FormValidator(settings, addCardModalForm);
-addCardFormValidator.enableValidation();
+// const editFormValidator = new FormValidator(settings, profileEditModalForm);
+// editFormValidator.enableValidation();
+// const addCardFormValidator = new FormValidator(settings, addCardModalForm);
+// addCardFormValidator.enableValidation();
+
+// Object for storing validators
+const formValidators = {};
+
+const enableValidation = (settings) => {
+  const formList = Array.from(document.querySelectorAll(settings.formSelector));
+  formList.forEach((formElement) => {
+    const validator = new FormValidator(settings, formElement);
+    const formName = formElement.getAttribute("name");
+    formValidators[formName] = validator;
+    validator.enableValidation();
+  });
+};
+
+enableValidation(settings);
