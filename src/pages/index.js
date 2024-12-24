@@ -101,12 +101,6 @@ const userInfo = new UserInfo({
   jobSelector: ".profile__description",
 });
 
-// Instances of Validation
-// const editFormValidator = new FormValidator(settings, profileEditModalForm);
-// editFormValidator.enableValidation();
-// const addCardFormValidator = new FormValidator(settings, addCardModalForm);
-// addCardFormValidator.enableValidation();
-
 // Object for storing validators
 const formValidators = {};
 
